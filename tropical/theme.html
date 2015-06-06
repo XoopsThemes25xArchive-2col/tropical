@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
+<head>
+<!-- Theme name -->
+	<{assign var=theme_name value=$xoTheme->folderName}>
+    <!--
+    Created by Artisteer, ported to XOOPS by Kevin from NightQuest
+    Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
+    -->
+<!-- Meta Tags And Title -->
+	<meta name="Description" content="<{$xoops_meta_description}>" />
+	<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+	<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+	<meta name="keywords" content="<{$xoops_pagetitle}>,<{$xoops_meta_keywords}>" />
+	<meta name="rating" content="<{$xoops_meta_rating}>" />
+	<meta name="author" content="<{$xoops_meta_author}>" />
+	<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+	<meta name="generator" content="<{$smarty.const.META_GENER}>" />
+	<meta name="robots" content="<{$xoops_meta_robots}>" />
+	<meta name="revisit-after" content="<{$smarty.const.META_REV_AFT}>" />
+	<title><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}></title>
+<!-- Stylesheets -->
+    <link rel="stylesheet" href="<{xoImgUrl style.css}>" type="text/css" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" href="<{xoImgUrl style.ie6.css}>" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="<{xoImgUrl style.ie7.css}>" type="text/css" media="screen" /><![endif]-->
+</head>
+<body>
+<div id="art-main">
+        <div class="art-sheet">
+            <div class="art-sheet-tl"></div>
+            <div class="art-sheet-tr"></div>
+            <div class="art-sheet-bl"></div>
+            <div class="art-sheet-br"></div>
+            <div class="art-sheet-tc"></div>
+            <div class="art-sheet-bc"></div>
+            <div class="art-sheet-cl"></div>
+            <div class="art-sheet-cr"></div>
+            <div class="art-sheet-cc"></div>
+            <div class="art-sheet-body">
+                <div class="art-header">
+                    <div class="art-header-jpeg"></div>
+                    <div class="art-logo">
+                        <h1 id="name-text" class="art-logo-name"><a href="<{xoAppUrl }>"><{$xoops_sitename}></a></h1>
+                        <div id="slogan-text" class="art-logo-text">Add Your Slogan Here (edit in theme.html)</div>
+                    </div>
+                </div>
+                <div class="art-nav">
+                	<div class="l"></div>
+                	<div class="r"></div>
+                	<ul class="art-menu">
+                		<li>
+                			<a href="#" class="active"><span class="l"></span><span class="r"></span><span class="t">Home</span></a>
+                		</li>
+                		<li>
+                			<a href="#"><span class="l"></span><span class="r"></span><span class="t">Menu Item</span></a>
+                			<ul>
+                				<li><a href="#">Menu Subitem 1</a>
+                					<ul>
+                						<li><a href="#">Menu Subitem 1.1</a></li>
+                						<li><a href="#">Menu Subitem 1.2</a></li>
+                						<li><a href="#">Menu Subitem 1.3</a></li>
+                					</ul>
+                				</li>
+                				<li><a href="#">Menu Subitem 2</a></li>
+                				<li><a href="#">Menu Subitem 3</a></li>
+                			</ul>
+                		</li>		
+                		<li>
+                			<a href="#"><span class="l"></span><span class="r"></span><span class="t">About</span></a>
+                		</li>
+                	</ul>
+                </div>
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-sidebar1">
+                          <div class="art-block">
+                  <div class="art-block-body">
+                                            
+                                            <div class="art-blockcontent">
+                                                <div class="art-blockcontent-body">
+                                            <!-- block-content -->
+			<div class="sidebar">
+			<{foreach item=block from=$xoBlocks.canvas_left}>
+				<{if $block.title == ''}> <{* Useful for diplaying well blocks with no title *}>
+					<{$block.content}>
+				<{else}>
+					<h2><{$block.title}><{if $xoops_isadmin}> <a rel="external" href="<{xoAppUrl /modules/system/admin.php?fct=blocksadmin&op=edit&bid=}><{$block.id}>" title="Edit This Block" >(e)</a><{/if}></h2>
+					<{$block.content}>
+				<{/if}>
+			<{/foreach}>
+			</div>
+                                            <!-- /block-content -->
+                                            
+                                            		<div class="cleared"></div>
+                                                </div>
+                                            </div>
+                            		<div class="cleared"></div>
+                                </div>
+                            </div>
+                            <div class="art-block">
+                            <div class="art-block-body">
+                              <div class="art-blockcontent">
+                              <div class="art-blockcontent-body">
+                <div class="cleared"></div>
+                                                </div>
+                                            </div>
+                            		<div class="cleared"></div>
+                                </div>
+                            </div>
+                            <div class="art-block">
+                                <div class="art-block-body">
+                                            <div class="art-blockcontent">
+                                              <div class="art-blockcontent-body">
+                                            <!-- /block-content -->
+                                            
+                                            		<div class="cleared"></div>
+                                                </div>
+                                            </div>
+                            		<div class="cleared"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maincontent">
+			<{if $xoops_showcblock}>
+				<ul class="s_tabs">
+					<h2>Spotlight</h2>
+					<{if $xoops_contents && ($xoops_contents != ' ') }><li><a href="#"><{$xoops_pagetitle}></a></li><{/if}>
+					<{foreach item=block from=$xoBlocks.page_topcenter}><li><a href="#"><{$block.title}></a></li><{/foreach}>
+				</ul>
+				<div class="clear"></div>
+				<div class="s_content">
+					<{if $xoops_contents && ($xoops_contents != ' ') }><div><{$xoops_contents}></div><{/if}>
+					<{foreach item=block from=$xoBlocks.page_topcenter}><div><{$block.content}></div><{/foreach}>
+				</div>
+				<script>
+					$(function() { 
+						$("ul.s_tabs").tabs("div.s_content > div"); 
+					});
+				</script>
+			<{else}>
+				<div class="s_content"><{$xoops_contents}></div>
+			<{/if}>
+			</div>
+                    </div>
+                </div>
+                <div class="cleared"></div><div class="art-footer">
+                    <div class="art-footer-inner">
+                        <a href="<{xoAppUrl backend.php}>" class="art-rss-tag-icon" title="RSS"></a>
+                        <div class="art-footer-text">
+                            <p><{$xoops_footer}></p>
+                        </div>
+                    </div>
+                    <div class="art-footer-background"></div>
+                </div>
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+    </div>
+    
+</body>
+</html>
